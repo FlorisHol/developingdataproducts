@@ -1,0 +1,55 @@
+---
+title: "Cars Clustering"
+author: "Floris Hol"
+date: "3 May 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+``` 
+
+## Introduction Cars
+
+Different cars have different speeds and stopping distances when kicking the 
+brake. The developed app clusters cars based on these two variables using the
+k-means clustering technique.
+
+The user of the app can set the number of clusters to be created manually in
+order to verify which number of clusters (centroids) shows the clearest 
+distribution.
+
+
+
+
+## Dataset
+
+A native R dataset has been used for the purpose of building this app. A 
+scatterplot shows the cars  on both axes before clustering:
+
+```{r, cars, fig.cap="A scatterplot.", echo=FALSE}
+plot(cars)
+```
+
+
+
+
+## K-means clustering
+
+K-Means starts by randomly defining k centroids. From there, it works in 
+iterative (repetitive) steps to perform two tasks:
+
+- Assign each data point to the closest corresponding centroid, using the 
+standard Euclidean distance. 
+
+- For each centroid, calculate the mean of the values of all the points 
+belonging to it. The mean value becomes the new value of the centroid.
+
+
+
+## Go to the App
+
+You can find the app here on my Github page:
+
+https://mycarsclusteringapp.shinyapps.io/myApp/
+
